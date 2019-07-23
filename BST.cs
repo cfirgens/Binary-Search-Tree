@@ -25,20 +25,28 @@ namespace Binary_Search_Tree
 
             else
             {
-                Node parent = root;
+                Node current = root;
             
-                if (item > parent.data)
+                if (item > current.data)
                 {
-                    if (parent.right == null)
+                    if (current.right == null)
                     {
-                        parent.right = new Node(item);                        
+                        current.right = new Node(item);                        
+                    }
+                    else
+                    {
+                        current = current.right;
                     }
                 }
                 else
                 {
-                    if (parent.left == null)
+                    if (current.left == null)
                     {
-                        parent.left = new Node(item);
+                        current.left = new Node(item);
+                    }
+                    else
+                    {
+                        current = current.left;
                     }
 
                 }
