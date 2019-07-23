@@ -31,9 +31,8 @@ namespace Binary_Search_Tree
                 {
                     if (parent.right == null)
                     {
-                        parent.right = new Node(item);
+                        parent.right = new Node(item);                        
                     }
-
                 }
                 else
                 {
@@ -44,6 +43,57 @@ namespace Binary_Search_Tree
 
                 }
             }
+        }
+
+        public void Search(int searchInt)
+        {
+            bool intFound = false;
+            Node current;
+            current = root;
+
+            
+            while (!intFound)
+            {
+                if (current == null)
+                {
+                    break;
+                }
+
+                else if (searchInt > current.data)
+                {
+                    if (current.right.data == searchInt)
+                    {
+                        intFound = true;
+                        break;
+                    }
+                    else
+                    {
+                        current = current.right;
+                    }
+                }
+                else
+                {
+                    if (current.left.data == searchInt)
+                    {
+                        intFound = true;
+                        break;
+                    }
+                    else
+                    {
+                        current = current.left;
+                    }
+                }
+
+            }
+            if (intFound == true)
+            {
+                Console.WriteLine("Node was found");
+            }
+            else
+            {
+                Console.WriteLine("Node was not found");
+            }
+
         }
 
         
