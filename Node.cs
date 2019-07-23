@@ -8,5 +8,15 @@ namespace Binary_Search_Tree
 {
     class Node
     {
+        //member variables
+        public int data;
+        public Node left;
+        public Node right;
+
+        //constructor
+        public Node()
+        {
+            
+        }
     }
 }
