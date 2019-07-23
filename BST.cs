@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Binary_Search_Tree
 {
-    class BST
+    public class BST
     {
         //member variables
         Node root = null;
         //Constructor
 
-
+        //methods
         public void Add(int item)
         {
             Node node = new Node(item);
